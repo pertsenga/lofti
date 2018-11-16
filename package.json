@@ -28,6 +28,7 @@
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
+    "cordova-plugin-facebook4": "3.1.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -39,5 +40,13 @@
     "@ionic/lab": "1.0.13",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-facebook4": {
+        "APP_ID": "479424645798703",
+        "APP_NAME": "Lofti App"
+      }
+    }
+  }
 }
