@@ -60,7 +60,9 @@ export class WelcomePage {
 	  .catch(e => console.log('Error logging into Facebook', e));
   }
 
-  loginWithGoogle() {}
+  loginWithGoogle() {
+    this.navCtrl.setRoot('TutorialPage');
+  }
 
   signup() {
     this.navCtrl.push('SignupPage');
