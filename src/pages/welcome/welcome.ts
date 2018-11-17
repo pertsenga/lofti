@@ -29,12 +29,12 @@ export class WelcomePage {
   ) { }
 
   login() {
-    this.navCtrl.push('LoginPage');
+    this.navCtrl.setRoot('TutorialPage');
   }
 
   loginWithFacebook() {
   	if(this.isDevApp) {
-  		this.navCtrl.push(MainPage);
+  		this.navCtrl.push('TutorialPage');
   	}
   	this.facebook.login(['public_profile', 'user_friends', 'email'])
 	  .then((res: FacebookLoginResponse) => {
