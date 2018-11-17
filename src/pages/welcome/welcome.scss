@@ -2,7 +2,7 @@ page-welcome {
 
   .sign-in-title {
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .splash-logo {
@@ -13,6 +13,31 @@ page-welcome {
     background-size: 100%;
     width: 70px;
     height: 70px;
+  }
+
+  .person-placeholder {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .sign-in-section {
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    ion-input {
+      padding: 10px;
+      border: lightgray solid 1px;
+    }
+
+    .signin-btn {
+      @extend .theme-gradient;
+      padding: 32px;
+      // background-color: red;
+    }
   }
 
   button.login {
@@ -27,6 +52,6 @@ page-welcome {
   }
 
   button.facebook {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }

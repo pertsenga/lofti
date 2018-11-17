@@ -17,6 +17,7 @@ import { MainPage } from '../';
 })
 export class WelcomePage {
 	isDevApp: boolean = true;
+	account: { email: string, password: string } = {};
 
   constructor(
   	public navCtrl: NavController,

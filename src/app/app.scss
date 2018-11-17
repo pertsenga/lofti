@@ -14,3 +14,22 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.circle-pic{
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.theme-gradient {
+	background: -moz-linear-gradient(215deg, rgba(243,206,157,1) 0%, rgba(218,91,87,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(218,91,87,1)), color-stop(100%, rgba(243,206,157,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(215deg, rgba(243,206,157,1) 0%, rgba(218,91,87,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(215deg, rgba(243,206,157,1) 0%, rgba(218,91,87,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(215deg, rgba(243,206,157,1) 0%, rgba(218,91,87,1) 100%); /* ie10+ */
+	background: linear-gradient(235deg, rgba(243,206,157,1) 0%, rgba(218,91,87,1) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DA5B57', endColorstr='#F3CE9D',GradientType=1 ); /* ie6-9 */
+}

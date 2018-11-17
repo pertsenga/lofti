@@ -3,14 +3,23 @@
     <p class="sign-in-title">{{ 'SIGNIN' | translate }}</p>
     <div class="splash-logo"></div>
   </div>
-  <div class="splash-info">
-    <div class="splash-intro">
-      {{ 'WELCOME_INTRO' | translate }}
+
+  <img class="circle-pic person-placeholder" src="../assets/img/person-placeholder.jpg" alt="person image">
+
+  <div class="sign-in-section">
+    <ion-item no-lines>
+      <ion-input placeholder="Email" type="email" [(ngModel)]="account.email" name="email"></ion-input>
+    </ion-item>
+    
+    <ion-item no-lines>
+      <ion-input placeholder="Password" type="password" [(ngModel)]="account.password" name="password"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button class="signin-btn" ion-button block>{{ 'LOGIN_BUTTON' | translate }}</button>
     </div>
-  </div>
-  <div padding>
-    <button ion-button block (click)="signup()">{{ 'SIGNUP' | translate }}</button>
-    <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+
+    <p class="text-center">or</p>
 
     <button ion-button block (click)="loginWithFacebook()" class="facebook">{{ 'LOGIN_FACEBOOK' | translate }}</button>
     <button ion-button block (click)="loginWithGoogle()" class="google">{{ 'LOGIN_GOOGLE' | translate }}</button>
