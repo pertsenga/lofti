@@ -13,7 +13,6 @@ import { HTTP } from '@ionic-native/http';
   ],
   providers: [
   	QRScanner,
-  	HTTP,
   ]
 })
 export class QrscannerPageModule {}

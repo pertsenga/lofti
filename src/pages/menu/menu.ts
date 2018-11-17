@@ -20,12 +20,29 @@ export class MenuPage {
 
   pages: PageList;
 
+  menuItems = [
+    {
+      title: 'Scan QR',
+      component: 'QrscannerPage'
+    },
+    {
+      title: 'News',
+      component: 'NewsfeedPage'
+    },
+    // {
+    //   title: 'Projects'
+    // },
+    // {
+    //   title: 'My Profile'
+    // },
+    // {
+    //   title: 'Credits'
+    // }
+  ]
+
   constructor(public navCtrl: NavController) {
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Sign in', component: 'LoginPage' },
-      { title: 'Signup', component: 'SignupPage' }
-    ];
+    this.pages = this.menuItems;
   }
 
   ionViewDidLoad() {

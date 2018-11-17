@@ -16,7 +16,7 @@ import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
 import { QRScanner } from '@ionic-native/qr-scanner';
-import { QrscannerPage } from '../pages/qrscanner/qrscanner';
+import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
 import { ReceiptPage } from '../pages/receipt/receipt';
 import { SingletonServiceProvider } from '../providers/singleton-service/singleton-service';
 
@@ -44,12 +44,12 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
-    QrscannerPage,
     ReceiptPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    QrscannerPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -63,7 +63,6 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    QrscannerPage,
     ReceiptPage,
   ],
   providers: [
