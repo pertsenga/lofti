@@ -29,8 +29,16 @@
 	box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+ion-title {
+	text-align: center;
+}
+
 .text-center {
 	text-align: center;
+}
+
+.text-white {
+	color: #ffffff !important;
 }
 
 .theme-gradient, .toolbar-background {

@@ -1,14 +1,14 @@
 page-newsfeed {
-	ion-navbar {
-		box-shadow: none;
-		@extend .theme-gradient;
-	}
-
 	ion-card.card {
 		width: 100%;
 		margin: 0;
 		box-shadow: none;
 		border-bottom: solid gray 1px;
+	}
+
+	ion-icon.globe {
+		font-size: 28px;
+		margin-right: 10px;
 	}
 
 	div.author {

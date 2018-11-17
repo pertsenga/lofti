@@ -27,7 +27,7 @@
     "@ionic-native/http": "^4.17.0",
     "@ionic-native/qr-scanner": "^4.17.0",
     "@ionic-native/splash-screen": "~4.15.0",
-    "@ionic-native/status-bar": "~4.15.0",
+    "@ionic-native/status-bar": "^4.15.0",
     "@ionic/pro": "2.0.3",
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "8.0.0",
