@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 
+import { ReceiptPage } from '../receipt/receipt';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 import { HTTP } from '@ionic-native/http';
 import { API_PASSWORD, API_PRODUCTS, API_USERNAME } from '../../pages';
@@ -107,7 +108,7 @@ export class QrscannerPage {
 	    subTitle: content,
 	    buttons: [{
 	    	text: 'Confirm',
-	    	handler: () => { this.navCtrl.push('TutorialPage'); }
+	    	handler: () => { this.navCtrl.setRoot(ReceiptPage); }
 	    }]
 	  });
 	  alert.present();

@@ -17,6 +17,7 @@ import { MyApp } from './app.component';
 
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { QrscannerPage } from '../pages/qrscanner/qrscanner';
+import { ReceiptPage } from '../pages/receipt/receipt';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -43,6 +44,7 @@ export function provideSettings(storage: Storage) {
   declarations: [
     MyApp,
     QrscannerPage,
+    ReceiptPage,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ export function provideSettings(storage: Storage) {
   entryComponents: [
     MyApp,
     QrscannerPage,
+    ReceiptPage,
   ],
   providers: [
     Api,

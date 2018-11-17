@@ -1,0 +1,35 @@
+page-receipt {
+	.splash-logo {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background: url('../assets/img/logo.png') no-repeat transparent;
+    background-size: 100%;
+    width: 120px;
+    height: 120px;
+  }
+
+  .thanks-text {
+  	font-weight: bold;
+  	margin-top: 50px;
+  }
+
+  .balance-text {
+  	padding: 0 30px;
+  	position: absolute;
+  	bottom: 25%;
+
+  	.amount-text {
+  		font-size: 120%;
+  		font-weight: bolder;
+  	}
+  }
+
+  .action-btns {
+  	position: absolute;
+  	bottom: 10px;
+  	width: 80%;
+  	display: block;
+  	margin: 5%;
+  }
+}
