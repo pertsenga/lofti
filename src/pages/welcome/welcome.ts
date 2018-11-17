@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { Platform } from 'ionic-angular';
+import { MainPage } from '../';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -13,12 +16,30 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
+	isDevApp: boolean = true;
 
-  constructor(public navCtrl: NavController) { }
+  constructor(
+  	public navCtrl: NavController,
+  	private facebook: Facebook,
+  	private platform: Platform,
+  ) { }
 
   login() {
     this.navCtrl.push('LoginPage');
   }
+
+  loginWithFacebook() {
+  	if(this.isDevApp) {
+  		this.navCtrl.push(MainPage);
+  	}
+  	this.facebook.login(['public_profile', 'user_friends', 'email'])
+	  .then((res: FacebookLoginResponse) => {
+	  	console.log('Logged into Facebook!', res)
+	  })
+	  .catch(e => console.log('Error logging into Facebook', e));
+  }
+
+  loginWithGoogle() {}
 
   signup() {
     this.navCtrl.push('SignupPage');
