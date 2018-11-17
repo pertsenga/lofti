@@ -18,6 +18,7 @@ import { MyApp } from './app.component';
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { QrscannerPage } from '../pages/qrscanner/qrscanner';
 import { ReceiptPage } from '../pages/receipt/receipt';
+import { SingletonServiceProvider } from '../providers/singleton-service/singleton-service';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -77,7 +78,8 @@ export function provideSettings(storage: Storage) {
     HTTP,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    SingletonServiceProvider
   ]
 })
 export class AppModule { }
