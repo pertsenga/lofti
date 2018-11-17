@@ -3,6 +3,8 @@ import { IonicPage, MenuController, NavController, Platform } from 'ionic-angula
 
 import { TranslateService } from '@ngx-translate/core';
 
+import { MainPage } from '../';
+
 export interface Slide {
   title: string;
   description: string;
@@ -51,7 +53,7 @@ export class TutorialPage {
   }
 
   startApp() {
-    this.navCtrl.setRoot('WelcomePage', {}, {
+    this.navCtrl.setRoot(MainPage, {}, {
       animate: true,
       direction: 'forward'
     });

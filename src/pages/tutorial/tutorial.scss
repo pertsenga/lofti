@@ -1,7 +1,38 @@
+$slategray: #323c46;
+
 page-tutorial {
+  .splash-bg {
+    position: absolute;
+    background-color: $slategray;
+    background-size: cover;
+    height: 100%;
+    z-index: -1;
+  }
+
   .toolbar-background {
     background: transparent;
     border-color: transparent;
+  }
+
+  ion-slide {
+    background-color: white;
+    margin: auto 5%;
+    margin-top: 50px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 74%; 
+  }
+
+  .swiper-pagination {
+    margin-bottom: 20%;
+  }
+
+  .get-started {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    @extend .text-center;
   }
 
   .slide-zoom {
