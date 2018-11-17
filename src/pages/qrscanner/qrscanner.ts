@@ -108,7 +108,7 @@ export class QrscannerPage {
 	    subTitle: content,
 	    buttons: [{
 	    	text: 'Confirm',
-	    	handler: () => { this.navCtrl.setRoot(ReceiptPage); }
+	    	handler: () => { this.navCtrl.setRoot(ReceiptPage, { cost: _.toNumber(price) }); }
 	    }]
 	  });
 	  alert.present();
