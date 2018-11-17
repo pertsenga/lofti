@@ -4,6 +4,7 @@ import { IonicPage, MenuController, NavController, Platform } from 'ionic-angula
 import { TranslateService } from '@ngx-translate/core';
 
 import { MainPage } from '../';
+import { QrscannerPage } from '../qrscanner/qrscanner';
 
 export interface Slide {
   title: string;
@@ -53,7 +54,7 @@ export class TutorialPage {
   }
 
   startApp() {
-    this.navCtrl.setRoot(MainPage, {}, {
+    this.navCtrl.setRoot(QrscannerPage, {}, {
       animate: true,
       direction: 'forward'
     });

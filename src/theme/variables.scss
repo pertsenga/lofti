@@ -15,6 +15,10 @@ $font-path: "../assets/fonts";
 $text-color:        #000;
 $background-color:  #fff;
 
+ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+  background: transparent none !important;
+}
+
 
 // Named Color Variables
 // --------------------------------------------------
