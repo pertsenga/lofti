@@ -13,6 +13,16 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+	<ion-card *ngFor="let post of posts">
+		<div class="author">
+			<img class="circle-pic author-pic" src="{{ post.author_avatar }}" alt="author image">
+			<span class="name">{{ post.author }}</span>
+			<span class="time">{{ post.last_posted }}</span>
+		</div>
+	  <img src="{{ post.post_image }}"/>
+	  <ion-card-content>
+	    <div [innerHtml]="post.post_excerpt"></div>
+	  </ion-card-content>
+	</ion-card>
 </ion-content>

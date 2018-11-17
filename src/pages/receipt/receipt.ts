@@ -44,7 +44,7 @@ export class ReceiptPage {
   }
 
   closeScreen() {
-  	this.navCtrl.push('ProjectsPage');
+  	this.navCtrl.push('NewsfeedPage');
   }
 
   presentLoadingDefault(text: string) {

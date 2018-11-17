@@ -89,6 +89,6 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-qrscanner" spec="2.6.0" />
     <plugin name="cordova-plugin-advanced-http" spec="2.0.1" />
-    <allow-navigation href="http://192.168.10.85:8100" sessionid="35084f24" />
+    <allow-navigation href="http://192.168.10.85:8100" sessionid="49307f63" />
     <engine name="android" spec="7.1.2" />
 </widget>

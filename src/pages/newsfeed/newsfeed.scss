@@ -1,3 +1,35 @@
 page-newsfeed {
+	ion-navbar {
+		box-shadow: none;
+		@extend .theme-gradient;
+	}
 
+	ion-card.card {
+		width: 100%;
+		margin: 0;
+		box-shadow: none;
+		border-bottom: solid gray 1px;
+	}
+
+	div.author {
+		display: flex;
+
+		span.name {
+			margin: auto 4px;
+		}
+	}
+
+	span.time {
+		margin: auto 4px;
+		width: 100%;
+		text-align: right;
+		padding-right: 10px;
+	}
+
+	.author-pic {
+		width: 40px;
+		height: 40px;
+		margin: 15px;
+		box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+	}
 }

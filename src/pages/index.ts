@@ -15,3 +15,5 @@ export const API_PASSWORD = 'cs_dbc282a1c43c7b96723da7f0745c18e972849072';
 
 export const API_PRODUCTS = 'https://lofti.eoi.digital/wp-json/wc/v2/products';
 export const API_CUSTOMERS = 'https://lofti.eoi.digital/wp-json/wc/v2/customers';
+export const API_NEWS = 'https://lofti.eoi.digital/wp-json/wp/v2/posts';
+export const API_AUTHORS = 'https://lofti.eoi.digital/wp-json/wp/v2/users';
