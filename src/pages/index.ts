@@ -12,5 +12,6 @@ export const Tab3Root = 'SettingsPage';
 
 export const API_USERNAME = 'ck_ff8c094da6ae8a7475db690d087aacc4363b1bbb';
 export const API_PASSWORD = 'cs_dbc282a1c43c7b96723da7f0745c18e972849072';
+
 export const API_PRODUCTS = 'https://lofti.eoi.digital/wp-json/wc/v2/products';
 export const API_CUSTOMERS = 'https://lofti.eoi.digital/wp-json/wc/v2/customers';

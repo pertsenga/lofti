@@ -4,6 +4,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { Platform, LoadingController, AlertController } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http';
 import { MainPage, API_CUSTOMERS, API_USERNAME, API_PASSWORD } from '../';
+import { SingletonServiceProvider } from '../../providers/singleton-service/singleton-service';
 import * as _ from 'lodash';
 
 /**
@@ -31,6 +32,7 @@ export class WelcomePage {
     private http: HTTP,
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
+    public singleton: SingletonServiceProvider,
   ) { }
 
   login() {
@@ -40,8 +42,14 @@ export class WelcomePage {
     this.http.get(API_CUSTOMERS, {}, {})
       .then(res => {
         loader.dismiss();
+
         let data = JSON.parse(res.data);
-        if (_.find(data, { "email": this.account.email })) {
+        let user = _.find(data, { "email": this.account.email });
+
+        let isUserExisting: boolean = !_.isEmpty(user);
+        if (isUserExisting) { this.singleton.assignUser(user); }
+
+        if (isUserExisting) {
           this.navCtrl.setRoot('TutorialPage');
         } else {
           this.presentPopupDefault('Sign In Failed.', 'Please make sure email and password are correct.');

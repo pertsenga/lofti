@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { SingletonServiceProvider } from '../../providers/singleton-service/singleton-service';
+import { HTTP } from '@ionic-native/http';
+import { API_PASSWORD, API_PRODUCTS, API_USERNAME } from '../../pages';
 
 /**
  * Generated class for the ReceiptPage page.
@@ -16,7 +19,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReceiptPage {
 	balance: number = 0.00;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+  		public navCtrl: NavController,
+  		public navParams: NavParams,
+  		public singleton: SingletonServiceProvider,
+  		public loadingCtrl: LoadingController,
+  		private http: HTTP,
+  	) {
+
+  	this.http.g
+  	this.presentLoadingDefault('Updating credits...')
+  	this.balance = singleton.subtractFromBalance(120);
   }
 
   ionViewDidLoad() {
@@ -26,5 +39,15 @@ export class ReceiptPage {
   closeScreen() {
   	this.navCtrl.push('ProjectsPage');
   }
+
+  presentLoadingDefault(text: string) {
+	  let loading = this.loadingCtrl.create({
+	    content: text
+	  });
+
+	  loading.present();
+
+	  return loading;
+	}
 
 }
