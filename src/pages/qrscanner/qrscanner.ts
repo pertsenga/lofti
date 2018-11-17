@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams, AlertController, LoadingController
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 import { HTTP } from '@ionic-native/http';
 import { API_PASSWORD, API_PRODUCTS, API_USERNAME } from '../../pages';
-
+import * as _ from 'lodash';
 /**
  * Generated class for the QrscannerPage page.
  *
@@ -42,13 +42,18 @@ export class QrscannerPage {
 		        scanSub.unsubscribe(); // stop scanning
 		        this.hideCamera();
 
-		        let loader = this.presentLoadingDefault(text);
+		        let qrObj = JSON.parse(text);
+		        let loader = this.presentLoadingDefault(qrObj.product);
 
 		        this.http.useBasicAuth(API_USERNAME, API_PASSWORD);
-		        this.http.get(API_PRODUCTS, {}, { username: API_USERNAME, password: API_PASSWORD })
+		        this.http.get(API_PRODUCTS, { search: qrObj.product }, { })
 		        	.then((res) => {
 			        	loader.dismiss();
-			        	this.presentPopupDefault("Product Details", JSON.parse(res.data)[0].name);
+
+			        	let data = JSON.parse(res.data)[0];
+			        	data.location = qrObj.location;
+
+			        	this.presentPopupDefault("Product Details", data);
 			        	// this.navCtrl.push('TutorialPage');
 			        })
 		        // this.navCtrl.push('ProductPage');
@@ -78,11 +83,32 @@ export class QrscannerPage {
 	  (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
 	}
 
-	presentPopupDefault(title: string, text: string) {
+	presentPopupDefault(title: string, obj) {
+		let img = `<img class="product-modal-img" src="${obj.images[0].src}'" alt="product image">`;
+	  let name = obj.name;
+	  let short_desc = obj.short_description;
+	  let desc = obj.description;
+	  let loc = obj.location;
+	  let price = obj.price;
+
+	  let content = `
+	  	<div class="text-center">
+		  	${img}
+		  	<h3>${name}</h3>
+		  	<h5>${short_desc}</h5>
+		  	${desc}
+		  	<h1>Php${price}</h1>
+		  	Buying from ${loc}.
+		  </div>
+	  	`;
+
 	  let alert = this.alertCtrl.create({
 	    title: title,
-	    subTitle: text,
-	    buttons: ['Cancel', 'Continue']
+	    subTitle: content,
+	    buttons: [{
+	    	text: 'Confirm',
+	    	handler: () => { this.navCtrl.push('TutorialPage'); }
+	    }]
 	  });
 	  alert.present();
 	}

@@ -20,6 +20,15 @@
     border-radius: 50%;
 }
 
+.product-modal-img {
+	width: 150px;
+	height: 150px;
+	display: block;
+	margin: 10px auto;
+	margin-bottom: 0;
+	box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
 .text-center {
 	text-align: center;
 }
