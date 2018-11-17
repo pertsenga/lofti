@@ -19,9 +19,11 @@
       <button ion-button class="signin-btn" ion-button block>{{ 'LOGIN_BUTTON' | translate }}</button>
     </div>
 
-    <p class="text-center">or</p>
+    <div class="text-center">or</div>
 
-    <button ion-button block (click)="loginWithFacebook()" class="facebook">{{ 'LOGIN_FACEBOOK' | translate }}</button>
-    <button ion-button block (click)="loginWithGoogle()" class="google">{{ 'LOGIN_GOOGLE' | translate }}</button>
+    <div class="social-login">
+      <button ion-button block (click)="loginWithFacebook()" class="facebook">{{ 'LOGIN_FACEBOOK' | translate }}</button>
+      <button ion-button block (click)="loginWithGoogle()" class="google">{{ 'LOGIN_GOOGLE' | translate }}</button>
+    </div>
   </div>
 </ion-content>

@@ -17,7 +17,10 @@ import { MainPage } from '../';
 })
 export class WelcomePage {
 	isDevApp: boolean = true;
-	account: { email: string, password: string } = {};
+	account: { email: string, password: string } = {
+		email: '',
+		password: ''
+	};
 
   constructor(
   	public navCtrl: NavController,
