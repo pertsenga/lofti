@@ -13,14 +13,6 @@
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>
     </ion-slide>
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
-      <h2 class="slide-title">{{ 'TUTORIAL_SLIDE4_TITLE' | translate }}</h2>
-      <button ion-button icon-end large clear (click)="startApp()">
-    {{ 'GET_STARTED' | translate }}
-    <ion-icon name="arrow-forward"></ion-icon>
-  </button>
-    </ion-slide>
   </ion-slides>
   <button class="get-started" ion-button icon-end large clear (click)="startApp()">
     {{ 'GET_STARTED' | translate }}

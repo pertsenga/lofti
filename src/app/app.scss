@@ -17,7 +17,7 @@
 
 ion-menu.appMain {
 	ion-content {
-		background: $darkslategray;
+		background: url('../assets/imgs/beans.jpg') repeat;
 		color: white;
 
 		img.avatar {
@@ -39,6 +39,19 @@ ion-menu.appMain {
 		}
 	}
 
+	ion-content:before{
+	  position: absolute;
+	  content:" ";
+	  top:0;
+	  left:0;
+	  width:100%;
+	  height:100%;
+	  display: block;
+	  z-index:0;
+	  background-color: rgba(50,60,70, 0.75);
+	}
+
+
 	ion-list {
 		position: absolute;
 		bottom: 30%;
@@ -55,7 +68,7 @@ ion-menu.appMain {
 		display: block;
 		position: absolute;
 		bottom: 50px;
-		left: 65%;
+		left: 60%;
 
 		span.balance-credits {
 			font-size: 250%;

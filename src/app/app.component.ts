@@ -21,7 +21,7 @@ import { SingletonServiceProvider } from '../providers/singleton-service/singlet
       <p>{{ user.name || 'John Doe' }}</p>
       <div class="credits-container">
         <span class="balance-credits">{{ balance }}</span><br>
-        <span>CREDITS</span>
+        <span>PHP</span>
       </div>
     </ion-content>
 
@@ -45,8 +45,16 @@ export class MyApp {
       component: 'NewsfeedPage'
     },
     {
+      title: 'Projects',
+      component: 'NewsfeedPage'
+    },
+    {
       title: 'My Profile',
       component: 'ProfilePage'
+    },
+    {
+      title: 'Logout',
+      component: 'WelcomePage'
     }
   ]
 
