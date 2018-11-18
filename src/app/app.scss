@@ -15,6 +15,64 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.appMain {
+	ion-content {
+		background: $darkslategray;
+		color: white;
+
+		img.avatar {
+			width: 75px;
+			height: 75px;
+			position: absolute;
+			bottom: 0;
+			margin: 52px;
+			margin-bottom: 90px;
+			box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.5);
+		}
+
+		p {
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 50px;
+			margin-left: 52px;
+			font-size: 130%;
+		}
+	}
+
+	ion-list {
+		position: absolute;
+		bottom: 30%;
+		margin-left: 34px;
+	}
+
+	button {
+		background: transparent;
+		color: white;
+		font-size: 160%;
+	}
+
+	.credits-container {
+		display: block;
+		position: absolute;
+		bottom: 50px;
+		left: 65%;
+
+		span.balance-credits {
+			font-size: 250%;
+		}
+	}
+}
+
+.splash-logo-menu {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background: url('../assets/img/logo.png') no-repeat transparent;
+    background-size: 100%;
+    width: 70px;
+    height: 70px;
+  }
+
 .circle-pic{
 	-webkit-border-radius: 50%;
     border-radius: 50%;
