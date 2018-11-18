@@ -44,6 +44,10 @@ export class MyApp {
       title: 'News',
       component: 'NewsfeedPage'
     },
+    {
+      title: 'My Profile',
+      component: 'ProfilePage'
+    }
   ]
 
   constructor(

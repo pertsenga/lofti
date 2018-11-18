@@ -18,6 +18,7 @@ import { MyApp } from './app.component';
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
 import { ReceiptPage } from '../pages/receipt/receipt';
+import { ProfilePageModule } from '../pages/profile/profile.module';
 import { SingletonServiceProvider } from '../providers/singleton-service/singleton-service';
 
 // The translate loader needs to know where to load i18n files
@@ -50,6 +51,7 @@ export function provideSettings(storage: Storage) {
     BrowserModule,
     HttpClientModule,
     QrscannerPageModule,
+    ProfilePageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

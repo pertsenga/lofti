@@ -17,7 +17,7 @@ $background-color:  #fff;
 $toolbar-md-title-text-color: #fff;
 $darkslategray: 	#323c46;
 
-ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+ion-app.cameraView, ion-app.cameraView ion-content.qr-area, ion-app.cameraView .nav-decor {
   background: transparent none !important;
 }
 
