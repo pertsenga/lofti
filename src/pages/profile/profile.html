@@ -10,7 +10,7 @@
   	<button ion-button menuToggle>
   		<ion-icon name="menu"></ion-icon>
   	</button>
-  	
+
     <ion-title>Profile</ion-title>
   </ion-navbar>
 
@@ -18,7 +18,12 @@
 
 
 <ion-content padding>
-	<div class="">
-		
-	</div>
+	<ion-card *ngFor="let metric of metrics">
+	  <ion-card-header>
+	    <span class="title">{{ metric.title }}</span>
+	  </ion-card-header>
+	  <ion-card-content>
+	    <span class="count">{{ metric.count }}</span> <span class="units">{{ metric.units }}</span>
+	  </ion-card-content>
+	</ion-card>
 </ion-content>

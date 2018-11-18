@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 import { SingletonServiceProvider } from '../../providers/singleton-service/singleton-service';
 import { HTTP } from '@ionic-native/http';
 import { API_PASSWORD, API_CUSTOMERS, API_USERNAME } from '../../pages';
+import moment from 'moment';
+
 
 /**
  * Generated class for the ReceiptPage page.
@@ -30,6 +32,8 @@ export class ReceiptPage {
   	// let loader = this.presentLoadingDefault('Updating credits...');
 
   	this.balance = singleton.subtractFromBalance(navParams.get('cost'));
+    this.singleton.addMetrics("cups", 1);
+    this.singleton.setMetrics("last_coffee", moment())
 
   	// this.http.useBasicAuth(API_USERNAME, API_PASSWORD);
   	// this.http.post(API_CUSTOMERS, {  }, {})

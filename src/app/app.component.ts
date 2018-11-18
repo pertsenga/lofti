@@ -63,6 +63,11 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      setInterval(() => {
+        this.user = this.singleton.currentUser();
+        this.balance = this.singleton.currentBalance();
+      }, 3000);
     });
     this.initTranslate();
   }
@@ -97,7 +102,5 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
-    this.user = this.singleton.currentUser();
-    this.balance = this.singleton.currentBalance();
   }
 }

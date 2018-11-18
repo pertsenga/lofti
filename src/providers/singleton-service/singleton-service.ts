@@ -12,9 +12,24 @@ import * as _ from 'lodash';
 export class SingletonServiceProvider {
 	private user: any = {};
   private balance: number = 0;
+  private metrics: any = {}
 
   constructor(public http: HttpClient) {
     console.log('Hello SingletonServiceProvider Provider');
+  }
+
+  public addMetrics(key, value: number) {
+    this.metrics[key] == null ? this.metrics[key] = value : this.metrics[key] += value;
+    return this.metrics[key];
+  }
+
+  public setMetrics(key, value: any) {
+    this.metrics[key] = value;
+    return this.metrics[key];
+  }
+
+  public getMetrics(key) {
+    return this.metrics[key];
   }
 
   public assignUser(user: any) {

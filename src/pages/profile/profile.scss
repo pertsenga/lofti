@@ -1,3 +1,30 @@
 page-profile {
+	ion-card {
+		text-align: center;
 
+		.title {
+			font-size: 150%;
+			font-weight: bolder;
+			// border-bottom: #DA5B57 solid 5px;
+		}
+		
+		.title:after {
+		    content: ""; /* This is necessary for the pseudo element to work. */ 
+		    display: block; /* This will put the pseudo element on its own line. */
+		    margin: 0 auto; /* This will center the border. */
+		    width: 20%; /* Change this to whatever width you want. */
+		    padding-top: 10px; /* This creates some space between the element and the border. */
+		    border-bottom: 4px solid #DA5B57; /* This creates the border. Replace black with whatever color you want. */
+		}
+
+		.count {
+			font-weight: bolder;
+			font-size: 150%;
+		}
+
+		.units {
+			vertical-align: top;
+			font-size: 120%;
+		}
+	}
 }
