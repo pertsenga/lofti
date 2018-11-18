@@ -13,9 +13,18 @@ export class SingletonServiceProvider {
 	private user: any = {};
   private balance: number = 0;
   private metrics: any = {}
+  private history: any = [];
 
   constructor(public http: HttpClient) {
     console.log('Hello SingletonServiceProvider Provider');
+  }
+
+  public getHistory() {
+    return this.history;
+  }
+
+  public pushToHistory(tras: any) {
+    this.history.push(tras);
   }
 
   public addMetrics(key, value: number) {

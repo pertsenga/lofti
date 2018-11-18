@@ -53,6 +53,10 @@ export class MyApp {
       component: 'ProfilePage'
     },
     {
+      title: 'History',
+      component: 'HistoryPage'
+    },
+    {
       title: 'Logout',
       component: 'WelcomePage'
     }

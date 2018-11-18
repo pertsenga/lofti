@@ -6,6 +6,8 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 import { HTTP } from '@ionic-native/http';
 import { API_PASSWORD, API_PRODUCTS, API_USERNAME } from '../../pages';
 import * as _ from 'lodash';
+import moment from 'moment';
+import { SingletonServiceProvider } from '../../providers/singleton-service/singleton-service';
 /**
  * Generated class for the QrscannerPage page.
  *
@@ -27,6 +29,7 @@ export class QrscannerPage {
   	private alertCtrl: AlertController,
   	private http: HTTP,
   	public loadingCtrl: LoadingController,
+  	public singleton: SingletonServiceProvider,
   ) { }
 
   ionViewDidLoad(){
@@ -102,6 +105,8 @@ export class QrscannerPage {
 		  	Buying from ${loc}.
 		  </div>
 	  	`;
+
+	  	this.singleton.pushToHistory({ product: name, credits: price, location: loc, time: moment() })
 
 	  let alert = this.alertCtrl.create({
 	    title: title,
