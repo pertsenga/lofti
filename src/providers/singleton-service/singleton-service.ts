@@ -20,7 +20,7 @@ export class SingletonServiceProvider {
   }
 
   public getHistory() {
-    return this.history;
+    return _.reverse(this.history);
   }
 
   public pushToHistory(tras: any) {
